@@ -9,8 +9,6 @@ public class Ejercicio07 {
 			count+=1;
 			sum+=i;
 		}
-
-		System.out.printf("La suma de los " + count + " elementos pedidos es " + sum + "%n");
 		System.out.printf("La suma de los %d elementos pedidos es %d.", count, sum);
 	}
 
