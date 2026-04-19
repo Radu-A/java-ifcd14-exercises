@@ -19,24 +19,6 @@ public class Vector {
 		this.y = copy.y;
 	}
 	
-	public void show() {
-		System.out.printf("Vector de coordenadas (%d, %d)%n", this.x, this.y);
-	}
-	
-	public int getX() {
-		return this.x;
-	}
-	public int getY() {
-		return this.y;
-	}
-	
-	public void setX(int value) {
-		this.x = value;
-	}
-	public void setY(int value) {
-		this.y = value;
-	}
-	
 	public Vector suma(Vector v) {
 		return new Vector(this.x + v.x, this.y + v.y);
 	}
@@ -79,6 +61,10 @@ public class Vector {
 		return this.x * v.x - this.y * v.y;
 	}
 	
+	public void show() {
+		System.out.printf("Vector de coordenadas (%d, %d)%n", this.x, this.y);
+	}
+
 	public boolean esPerpendicular(Vector v) {
 		int result = this.prodE(v);
 		return result == 0 && (this.x !=0 || this.y != 0) && (v.x != 0 || v.y != 0);
@@ -87,5 +73,19 @@ public class Vector {
 	public boolean esParalelo(Vector v) {
 		int result = this.prodV(v);
 		return result == 0 && (this.x !=0 || this.y != 0) && (v.x != 0 || v.y != 0);
+	}
+	
+	public int getX() {
+		return this.x;
+	}
+	public int getY() {
+		return this.y;
+	}
+	
+	public void setX(int value) {
+		this.x = value;
+	}
+	public void setY(int value) {
+		this.y = value;
 	}
 }
